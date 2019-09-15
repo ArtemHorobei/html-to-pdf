@@ -1,16 +1,13 @@
-const tableStyles = require('../utils/commonStyles');
-
 function tableTeachers(teachersData) {
     return `
-        <div>
-            ${tableStyles}
-            <span>Teachers</span>
+        <div class="tableWrap">
+            <span class="table_title">Teachers</span>
             <table>
                 <tbody>
                     ${teachersData.map(teacher => `
                         <tr>
-                            <td class="prime">${teacher.name}
-                            </td>
+                            <td class="prime">${teacher.name}</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

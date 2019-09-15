@@ -15,6 +15,7 @@ function legend(roomLegend) {
 legend.styles = `
     <style>
         .legend {
+            font-size: 8px;
             width: 100%;
             margin: 1rem 0;
             display: -webkit-flex;

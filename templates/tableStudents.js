@@ -1,13 +1,12 @@
-const tableStyles = require('../utils/commonStyles');
 const { getRandomNumber } = require('../utils/helpers');
 
 function tableStudents(studentsData, legendData) {
     return `
         <div>
-            ${tableStyles}
+            ${tableStudents.styles}
             <table>
                 <thead>
-                    <tr>
+                    <tr class="primeRow">
                         <td class="prime">Student Name</td>
                         <td>6:00am</td>
                         <td>6:30am</td>
@@ -34,6 +33,7 @@ function tableStudents(studentsData, legendData) {
                         <td>5:00pm</td>
                         <td>5:30pm</td>
                         <td>6:00pm</td>
+                        <td>6:30pm</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,6 +84,7 @@ function tableStudents(studentsData, legendData) {
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                     `).join('')}
                 </tbody>
@@ -93,7 +94,11 @@ function tableStudents(studentsData, legendData) {
 }
 
 tableStudents.styles = `
-    <style></style>
+    <style>
+        .primeRow > * {
+            font-weight: bold;
+        }
+    </style>
 `;
 
 module.exports = tableStudents;

@@ -1,3 +1,4 @@
+const commonStyles = require('../utils/commonStyles');
 const headerPage = require('./headerPage');
 const tableStudents = require('./tableStudents');
 const tableTeachers = require('./tableTeachers');
@@ -12,14 +13,17 @@ function commonPage({
     totalData,
 }) {
     return `
-        <html>
-            <head></head>
+        <html lang="en">
+            <head>
+                <title>PDF report</title>
+            </head>
             <body>
-                    ${headerPage(headerData)}
-                    ${tableStudents(studentsData, legendData)}
-                    ${tableTeachers(teachersData)}
-                    ${tableTotal(totalData)}
-                    ${legend(legendData)}
+                ${commonStyles}
+                ${headerPage(headerData)}
+                ${tableStudents(studentsData, legendData)}
+                ${tableTeachers(teachersData)}
+                ${tableTotal(totalData)}
+                ${legend(legendData)}
             </body>
         </html>
     `;

@@ -1,10 +1,7 @@
-const tableStyles = require('../utils/commonStyles');
-
 function tableTotal(totalData) {
     return `
-        <div>
-            ${tableStyles}
-            <span>Totals</span>
+        <div class="tableWrap">
+            <span class="table_title">Totals</span>
             <table>
                 <tbody>
                     <tr>
