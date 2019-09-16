@@ -1,8 +1,11 @@
-function tableTeachers(teachersData) {
+const timeline = require('./timeline');
+
+function tableTeachers(teachersData, legendData) {
     return `
         <div class="tableWrap">
             <span class="table_title">Teachers</span>
-            <table>
+            <div style="position: relative">
+              <table>
                 <tbody>
                     ${teachersData.map(teacher => `
                         <tr>
@@ -36,7 +39,23 @@ function tableTeachers(teachersData) {
                         </tr>
                     `).join('')}
                 </tbody>
-            </table>  
+            </table>
+            
+            <table style="position: absolute; top: 0;">
+                <tbody>
+                    ${teachersData.map(teacher => `
+                        <tr>
+                            <td class="prime" colspan="1"></td>
+                            <td colspan="26">
+                                <div class="timelinesContainer">
+                                    ${teacher.events.map(event => timeline(legendData, event))}
+                                </div>
+                            </td>
+                        </tr>
+                    `).join('')} 
+                </tbody>   
+            </table>
+            </div>
         </div>
     `;
 }

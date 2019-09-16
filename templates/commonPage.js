@@ -21,7 +21,7 @@ function commonPage({
                 ${commonStyles}
                 ${headerPage(headerData)}
                 ${tableStudents(studentsData, legendData)}
-                ${tableTeachers(teachersData)}
+                ${tableTeachers(teachersData, legendData)}
                 ${tableTotal(totalData)}
                 ${legend(legendData)}
             </body>

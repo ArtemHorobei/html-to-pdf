@@ -22,8 +22,6 @@ DataAdapter.init({
 
 const data = DataAdapter.getParseData();
 
-console.log(data);
-
 pdf.create(commonPage(data), config).toFile('./resultPDF/nurturePDF.pdf', function(err, res) {
     if (err) console.log(err);
     console.log(res);

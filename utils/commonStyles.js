@@ -11,11 +11,12 @@ const tableStyles = `
             width: 100%;
         }
     
-        table, th, td {
+        table, tr, td {
             border: 1px solid black;
         }
         
-        th, td {
+        tr, td {
+            height: 20px;
             padding: 5px 1px;
         }
         

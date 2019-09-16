@@ -5,6 +5,7 @@
 
 # misc
 .idea/
+/resultPDF
 
 npm-debug.log*
 yarn-debug.log*

@@ -1,8 +1,8 @@
-const { getRandomNumber } = require('../utils/helpers');
+const timeline = require('./timeline');
 
 function tableStudents(studentsData, legendData) {
     return `
-        <div>
+        <div style="position: relative">
             ${tableStudents.styles}
             <table>
                 <thead>
@@ -38,28 +38,9 @@ function tableStudents(studentsData, legendData) {
                 </thead>
                 <tbody>
                     ${studentsData.map(student => `
-                        <tr style="position: relative">
+                        <tr>
                             <td class="prime">${student.name}</td>
-                            <td>
-                                <div
-                                    style="
-                                        width: ${getRandomNumber(0, 86)}%;
-                                        position: absolute;
-                                        height: 10px;
-                                        background-color: greenyellow;
-                                        margin-bottom: 5px"
-                                >
-                                    <div class="legend_item">
-                                        <div
-                                            class="legend_itemRound"
-                                            style="
-                                            background-color: ${legendData.find(room => room.id === (student.events[0].checkOutRoom.id || 'home')).color};"
-                                        >                             
-                                    </div> 
-                                    ${legendData.find(room => room.id === (student.events[0].checkOutRoom.id || 'home')).shortName}
-                                    </div>
-                                </div>
-                            </td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -88,7 +69,53 @@ function tableStudents(studentsData, legendData) {
                         </tr>
                     `).join('')}
                 </tbody>
-            </table>  
+            </table>
+            
+            <table style="position: absolute; top: 0;">
+                <thead>
+                    <tr class="primeRow">
+                        <td class="prime"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>           
+                    </tr>
+                </thead>   
+                <tbody>
+                    ${studentsData.map(student => `
+                        <tr>
+                            <td colspan="1"></td>
+                            <td colspan="26">
+                                <div class="timelinesContainer">
+                                    ${student.events.map(event => timeline(legendData, event))}
+                                </div>
+                            </td>
+                        </tr>
+                    `).join('')} 
+                </tbody>   
+            </table>
         </div>
     `;
 }
@@ -97,6 +124,11 @@ tableStudents.styles = `
     <style>
         .primeRow > * {
             font-weight: bold;
+        }
+        .timelinesContainer {
+          position: relative;
+          width: 100%;
+          height: 100%;
         }
     </style>
 `;

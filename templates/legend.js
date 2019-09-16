@@ -5,7 +5,7 @@ function legend(roomLegend) {
             ${roomLegend
                 .map(room => `
                     <div class="legend_item">
-                        <div class="legend_itemRound" style="background-color: ${room.color};"></div> ${room.shortName} = ${room.name}
+                        <div class="legend_itemRound" style="margin-right: 5px; background-color: ${room.color};"></div> ${room.shortName} = ${room.name}
                     </div>
                 `).join('')}  
         </div>
@@ -28,9 +28,8 @@ legend.styles = `
         }
         .legend_itemRound {
             border-radius: 50%;
-            margin-right: 5px;
-            width: 10px;
-            height: 10px;
+            width: 7px;
+            height: 7px;
         }
     </style>
 `;
