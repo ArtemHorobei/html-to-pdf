@@ -119,18 +119,6 @@ const children = [
         name: 'Stas Biliy',
         events: [
             {
-                checkInTime: 'Mon Sep 16 2019 12:00:00 GMT+0300 (Eastern European Summer Time)',
-                checkInRoom: { id: 1, name: 'Adabelle' },
-                checkOutTime: 'Mon Sep 16 2019 14:33:00 GMT+0300 (Eastern European Summer Time)',
-                checkOutRoom: { id: 4, name: 'Music' }
-            },
-            {
-              checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkInRoom: { id: 1, name: 'Adabelle' },
-              checkOutTime: 'Mon Sep 16 2019 07:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: 2, name: 'Gym' }
-            },
-            {
               checkInTime: 'Mon Sep 16 2019 08:00:00 GMT+0300 (Eastern European Summer Time)',
               checkInRoom: { id: 1, name: 'Adabelle' },
               checkOutTime: 'Mon Sep 16 2019 10:00:00 GMT+0300 (Eastern European Summer Time)',

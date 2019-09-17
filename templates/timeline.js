@@ -10,7 +10,7 @@ function timeline(legendData, event) {
       <div class="timeline" style="margin-left: ${offsetGap}%;">
         ${timeline.styles}
         <div class="timeline_wrap">
-          <div class="legend_item">
+          <div class="legend_item" style="margin-right: -2px">
             <div
               class="legend_itemRound"
               style="
@@ -18,7 +18,7 @@ function timeline(legendData, event) {
             ></div>
           </div>                        
           <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 15px);"></div>                        
-          <div class="legend_item">
+          <div class="legend_item" style="margin-left: -2px">
             <div
               class="legend_itemRound"
               style="background-color: ${legendData.find(room => room.id === (event.checkOutRoom.id || 'home')).color};"
@@ -44,11 +44,14 @@ timeline.styles = `
     }
     .timeline_row {
       height: 10px;
-      background-color: greenyellow;
+      background-color: green;
+      -webkit-filter: opacity(0.7);
+      border-radius: 3px;
     }
     .timeline_roomName {
-      margin-left: 5px;
+      margin-left: 3px;
       font-weight: bold;
+      font-size: 10px;
     }
   </style>
 `;
