@@ -5,10 +5,10 @@ function tableTeachers(teachersData, legendData) {
         <div class="tableWrap">
             <h3 class="table_title">Teachers</h3>
             <div style="position: relative">
-              <table>
+              <table class="table">
                 <tbody>
                     ${teachersData.map(teacher => `
-                        <tr>
+                        <tr class="table_row">
                             <td class="prime">${teacher.name}</td>
                             <td></td>
                             <td></td>
@@ -41,7 +41,7 @@ function tableTeachers(teachersData, legendData) {
                 </tbody>
             </table>
             
-            <table style="position: absolute; top: 0;">
+            <table class="table_timeline">
                 <tbody>
                     ${teachersData.map(teacher => `
                         <tr>

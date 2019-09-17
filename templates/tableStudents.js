@@ -4,9 +4,9 @@ function tableStudents(studentsData, legendData) {
     return `
         <div style="position: relative">
             ${tableStudents.styles}
-            <table>
+            <table class="table">
                 <thead>
-                    <tr class="primeRow">
+                    <tr class="primeRow table_row">
                         <td class="prime">Student Name</td>
                         <td>6:00am</td>
                         <td>6:30am</td>
@@ -38,7 +38,7 @@ function tableStudents(studentsData, legendData) {
                 </thead>
                 <tbody>
                     ${studentsData.map(student => `
-                        <tr>
+                        <tr class="table_row">
                             <td class="prime">${student.name}</td>
                             <td></td>
                             <td></td>
@@ -71,7 +71,7 @@ function tableStudents(studentsData, legendData) {
                 </tbody>
             </table>
             
-            <table style="position: absolute; top: 0;">
+            <table class="table_timeline">
                 <thead>
                     <tr class="primeRow">
                         <td class="prime"></td>

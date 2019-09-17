@@ -2,13 +2,13 @@ function tableTotal(totalData) {
     return `
         <div class="tableWrap">
             <h3 class="table_title">Totals</h3>
-            <table>
+            <table class="table">
                 <tbody>
-                    <tr>
+                    <tr class="table_row">
                         <td class="prime">Total children</td>
                         ${totalData.childrenCount.map(count => `<td>${count}</td>`).join('')}
                     </tr>
-                    <tr>
+                    <tr class="table_row">
                         <td class="prime">Total teachers</td>
                         ${totalData.teachersCount.map(count => `<td>${count}</td>`).join('')}
                     </tr>

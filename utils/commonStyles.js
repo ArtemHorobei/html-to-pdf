@@ -4,14 +4,14 @@ const tableStyles = `
             font-family: Kartika;
         }
         
-        table {
+        .table {
             border-collapse: collapse;
             table-layout: fixed;
             font-size: 8px;
             width: 100%;
         }
     
-        table, tr, td {
+        .table, .table_row, .table_row > * {
             border: 1px solid black;
         }
         
@@ -39,6 +39,15 @@ const tableStyles = `
             font-size: 8px;
             font-weight: bold;
             margin-left: 3rem;
+        }
+        
+        .table_timeline {
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 8px;
+            width: 100%;
+            position: absolute;
+            top: 0;
         }
     </style>
 `;
