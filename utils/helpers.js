@@ -23,14 +23,12 @@ function getShortName(name) {
             .join('')
 }
 
-function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+function timeoutPromise(timeout, paylaod) {
+  return new Promise((resolve) => setTimeout(() => resolve(paylaod), timeout));
 }
 
 module.exports = {
     getRandomColor,
     getShortName,
-    getRandomNumber,
+    timeoutPromise,
 };

@@ -24,6 +24,8 @@ class DataAdapter {
         this.teachers = teachers;
         this.totals = totals;
         this.rooms = rooms;
+
+        return this;
     }
 
     getParseData() {
