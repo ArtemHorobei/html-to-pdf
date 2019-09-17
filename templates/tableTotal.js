@@ -1,7 +1,7 @@
 function tableTotal(totalData) {
     return `
         <div class="tableWrap">
-            <span class="table_title">Totals</span>
+            <h3 class="table_title">Totals</h3>
             <table>
                 <tbody>
                     <tr>

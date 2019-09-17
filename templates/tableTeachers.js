@@ -3,7 +3,7 @@ const timeline = require('./timeline');
 function tableTeachers(teachersData, legendData) {
     return `
         <div class="tableWrap">
-            <span class="table_title">Teachers</span>
+            <h3 class="table_title">Teachers</h3>
             <div style="position: relative">
               <table>
                 <tbody>

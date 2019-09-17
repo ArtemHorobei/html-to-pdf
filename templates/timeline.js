@@ -2,7 +2,7 @@ const moment = require('moment');
 
 function timeline(legendData, event) {
   const diffTimeInMinutes = moment(event.checkOutTime).diff(event.checkInTime) / 1000 / 60;
-  const widthTimelineInPercent = diffTimeInMinutes * 100 / 900;
+  const widthTimelineInPercent = diffTimeInMinutes * 100 / 790;
   const startTimeEvent = moment(event.checkInTime).format('HH:mm').split(':').map(num => +num);
   const offsetGap = (startTimeEvent[0] * 60 + startTimeEvent[1] - 360) * 100 / 780;
 
@@ -17,7 +17,7 @@ function timeline(legendData, event) {
               background-color: ${legendData.find(room => room.id === (event.checkInRoom.id || 'home')).color};"
             ></div>
           </div>                        
-          <div class="timeline_row" style="width: calc(${widthTimelineInPercent}%);"></div>                        
+          <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 15px);"></div>                        
           <div class="legend_item">
             <div
               class="legend_itemRound"
@@ -48,6 +48,7 @@ timeline.styles = `
     }
     .timeline_roomName {
       margin-left: 5px;
+      font-weight: bold;
     }
   </style>
 `;

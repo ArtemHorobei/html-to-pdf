@@ -26,7 +26,7 @@ const tableStyles = `
         }
         
         td.prime {
-            width: 120px;
+            width: 130px;
             text-align: right;
             padding-right: 10px;
         }

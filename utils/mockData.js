@@ -35,9 +35,9 @@ const children = [
         name: 'Karina Semerenko',
         events: [
             {
-                checkInTime: 'Mon Sep 16 2019 06:30:00 GMT+0300 (Eastern European Summer Time)',
+                checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkInRoom: { id: 1, name: 'Adabelle' },
-                checkOutTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+                checkOutTime: 'Mon Sep 16 2019 08:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkOutRoom: { id: 3, name: 'Zoo' }
             },
         ],
@@ -47,9 +47,9 @@ const children = [
         name: 'Stas Biliy',
         events: [
             {
-                checkInTime: 'Mon Sep 16 2019 07:14:00 GMT+0300 (Eastern European Summer Time)',
+                checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkInRoom: { id: 1, name: 'Adabelle' },
-                checkOutTime: 'Mon Sep 16 2019 14:33:00 GMT+0300 (Eastern European Summer Time)',
+                checkOutTime: 'Mon Sep 16 2019 09:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkOutRoom: { id: 4, name: 'Music' }
             },
         ],
@@ -59,9 +59,9 @@ const children = [
         name: 'Roman Martiuk',
         events: [
             {
-                checkInTime: 'Mon Sep 16 2019 09:13:00 GMT+0300 (Eastern European Summer Time)',
+                checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkInRoom: { id: 1, name: 'Adabelle' },
-                checkOutTime: 'Mon Sep 16 2019 18:02:00 GMT+0300 (Eastern European Summer Time)',
+                checkOutTime: 'Mon Sep 16 2019 18:00:00 GMT+0300 (Eastern European Summer Time)',
                 checkOutRoom: { id: 5, name: 'Cinema' }
             },
         ],
@@ -110,12 +110,6 @@ const children = [
               checkInTime: 'Mon Sep 16 2019 08:00:00 GMT+0300 (Eastern European Summer Time)',
               checkInRoom: { id: 1, name: 'Adabelle' },
               checkOutTime: 'Mon Sep 16 2019 10:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: 6, name: 'Reading' }
-            },
-            {
-              checkInTime: 'Mon Sep 16 2019 11:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkInRoom: { id: 1, name: 'Adabelle' },
-              checkOutTime: 'Mon Sep 16 2019 13:00:00 GMT+0300 (Eastern European Summer Time)',
               checkOutRoom: { id: 6, name: 'Reading' }
             },
         ],
