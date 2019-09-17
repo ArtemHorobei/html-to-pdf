@@ -20,7 +20,7 @@ class PDFManager {
         this.reportSaver = ReportSaver;
     }
 
-    async generate() {
+    async generate(roomId, currentDate) {
       const payload = await timeoutPromise(1000, {
         selectedDate,
         currentRoom,
@@ -28,7 +28,7 @@ class PDFManager {
         teachers,
         totals,
         rooms,
-      });
+      }); // remove and get real data with two params: roomId, currentDate.
 
       const dataForPDF = this.dataAdapter.init(payload).getParseData();
 
