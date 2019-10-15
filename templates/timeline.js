@@ -34,7 +34,7 @@ timeline.styles = `
   <style>
     .timeline {
       position: absolute;
-      top: 0;
+      top: 2px;
       width: 100%;
     }
     .timeline_wrap {
@@ -43,7 +43,7 @@ timeline.styles = `
       -webkit-align-self: center;
     }
     .timeline_row {
-      height: 10px;
+      height: 15px;
       background-color: green;
       -webkit-filter: opacity(0.7);
       border-radius: 3px;

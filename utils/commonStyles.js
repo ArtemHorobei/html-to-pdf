@@ -7,7 +7,7 @@ const tableStyles = `
         .table {
             border-collapse: collapse;
             table-layout: fixed;
-            font-size: 8px;
+            font-size: 7px;
             width: 100%;
         }
     
@@ -17,7 +17,6 @@ const tableStyles = `
         
         tr, td {
             height: 20px;
-            padding: 5px 1px;
         }
         
         td {
