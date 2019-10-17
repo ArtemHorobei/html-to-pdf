@@ -11,24 +11,94 @@ const children = [
         name: 'Artem Horobei',
         events: [
             {
-              checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+              checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
               checkInRoom: { id: 1, name: 'Adabelle' },
-              checkOutTime: 'Mon Sep 16 2019 07:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: 2, name: 'Gym' }
-            },
-            {
-              checkInTime: 'Mon Sep 16 2019 08:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkInRoom: { id: 1, name: 'Adabelle' },
-              checkOutTime: 'Mon Sep 16 2019 10:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: 6, name: 'Reading' }
-            },
-            {
-              checkInTime: 'Mon Sep 16 2019 11:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkInRoom: { id: 1, name: 'Adabelle' },
-              checkOutTime: 'Mon Sep 16 2019 13:00:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: 6, name: 'Reading' }
+              checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+              checkOutRoom: null
             },
         ],
+    },
+    {
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },
+    {
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },
+    {
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },
+    {
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },{
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },{
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
+    },
+    {
+      id: 11,
+      name: 'Artem Horobei',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: null
+        },
+      ],
     },
     {
         id: 12,
@@ -278,7 +348,7 @@ const children = [
                 checkInTime: 'Mon Sep 16 2019 14:34:00 GMT+0300 (Eastern European Summer Time)',
                 checkInRoom: { id: 1, name: 'Adabelle' },
                 checkOutTime: 'Mon Sep 16 2019 17:33:00 GMT+0300 (Eastern European Summer Time)',
-                checkOutRoom: { id: null, name: null }
+                checkOutRoom: null
             },
         ],
     },
@@ -311,21 +381,134 @@ const teachers = [
               checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
               checkInRoom: { id: 1, name: 'Adabelle' },
               checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
-              checkOutRoom: { id: null, name: null }
+              checkOutRoom: { id: 2, name: 'Gym' }
             },
         ],
     },
     {
-        id: 22,
-        name: 'Alex Gurland',
-        events: [
-            {
-                checkInTime: 'Mon Sep 16 2019 07:00:00 GMT+0300 (Eastern European Summer Time)',
-                checkInRoom: { id: 1, name: 'Adabelle' },
-                checkOutTime: 'Mon Sep 16 2019 17:34:00 GMT+0300 (Eastern European Summer Time)',
-                checkOutRoom: { id: null, name: null }
-            },
-        ],
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },
+    {
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },
+    {
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },
+    {
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },{
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },
+    {
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
+    },
+    {
+      id: 21,
+      name: 'Lida Kramenko',
+      events: [
+        {
+          checkInTime: 'Mon Sep 16 2019 06:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 13:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+        {
+          checkInTime: 'Mon Sep 16 2019 14:00:00 GMT+0300 (Eastern European Summer Time)',
+          checkInRoom: { id: 1, name: 'Adabelle' },
+          checkOutTime: 'Mon Sep 16 2019 17:37:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 2, name: 'Gym' }
+        },
+      ],
     },
 ];
 

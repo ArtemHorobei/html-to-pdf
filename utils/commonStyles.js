@@ -31,6 +31,7 @@ const tableStyles = `
         }
         
         .tableWrap {
+            page-break-inside: avoid;
             margin: 1rem 0;
         }
         
