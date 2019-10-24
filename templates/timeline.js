@@ -8,15 +8,21 @@ function timeline(legendData, event) {
     ? moment.parseZone(event.checkInTime).set({ hour: 6, minute: 0, second: 0, millisecond: 0 })
     : moment.parseZone(event.checkInTime);
 
-  const checkOutTime = checkOutTimeHour > 19
+  const checkOutTime = checkOutTimeHour > 18
     ? moment.parseZone(event.checkOutTime).set({ hour: 19, minute: 0, second: 0, millisecond: 0 })
     : moment.parseZone(event.checkOutTime);
 
   const diffTimeInMinutes = moment.parseZone(checkOutTime).diff(moment.parseZone(checkInTime)) / 1000 / 60;
-  const widthTimelineInPercent = diffTimeInMinutes * 100 / 780;
+  const widthTimelineInPercent = diffTimeInMinutes * 100 / 788;
   const startTimeEvent = moment.parseZone(checkInTime).format('HH:mm').split(':').map((num) => +num);
-  const offsetGap = (startTimeEvent[0] * 60 + startTimeEvent[1] - 360) * 100 / 780;
+  const offsetGap = (startTimeEvent[0] * 60 + startTimeEvent[1] - 360) * 100 / 795;
 
+  const timeInfo = widthTimelineInPercent > 6.4 ? (
+    `
+      <div class="timeline_row__info">${moment.parseZone(checkInTime).format('hh:mma')}</div>
+      <div class="timeline_row__info">${moment.parseZone(checkOutTime).format('hh:mma')}</div>
+    `
+  ) : '';
   return `
       <div class="timeline" style="margin-left: calc(${offsetGap}% - 2px);">
         ${timeline.styles}
@@ -29,8 +35,7 @@ function timeline(legendData, event) {
             ></div>
           </div>
           <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 5px);">
-            <div class="timeline_row__info">${moment.parseZone(checkInTime).format('HH:mma')}</div>
-            <div class="timeline_row__info">${moment.parseZone(checkOutTime).format('HH:mma')}</div>
+            ${timeInfo}
           </div>
           <div class="legend_item" style="margin-left: -2px">
             <div

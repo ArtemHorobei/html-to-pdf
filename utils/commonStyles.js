@@ -8,7 +8,7 @@ const tableStyles = `
             border-collapse: collapse;
             table-layout: fixed;
             font-size: 7px;
-            width: 100%;
+            width: 99%;
         }
     
         .table, .table_row, .table_row > * {
