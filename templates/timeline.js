@@ -1,20 +1,20 @@
 const moment = require('moment');
 
 function timeline(legendData, event) {
-  const checkInTimeRaw = moment(event.checkInTime).hour();
-  const checkOutTimeRaw = moment(event.checkOutTime).hour();
+  const checkInTimeHour = moment.parseZone(event.checkInTime).hour();
+  const checkOutTimeHour = moment.parseZone(event.checkOutTime).hour();
 
-  const checkInTime = checkInTimeRaw < 6
-    ? moment(event.checkInTime).set({ hour: 6, minute: 0, second: 0, millisecond: 0 })
-    : event.checkInTime;
+  const checkInTime = checkInTimeHour < 6
+    ? moment.parseZone(event.checkInTime).set({ hour: 6, minute: 0, second: 0, millisecond: 0 })
+    : moment.parseZone(event.checkInTime);
 
-  const checkOutTime = checkOutTimeRaw > 19
-    ? moment(event.checkOutTime).set({ hour: 19, minute: 0, second: 0, millisecond: 0 })
-    : event.checkOutTime;
+  const checkOutTime = checkOutTimeHour > 19
+    ? moment.parseZone(event.checkOutTime).set({ hour: 19, minute: 0, second: 0, millisecond: 0 })
+    : moment.parseZone(event.checkOutTime);
 
-  const diffTimeInMinutes = moment(checkOutTime).diff(checkInTime) / 1000 / 60;
+  const diffTimeInMinutes = moment.parseZone(checkOutTime).diff(moment.parseZone(checkInTime)) / 1000 / 60;
   const widthTimelineInPercent = diffTimeInMinutes * 100 / 780;
-  const startTimeEvent = moment(checkInTime).format('HH:mm').split(':').map(num => +num);
+  const startTimeEvent = moment.parseZone(checkInTime).format('HH:mm').split(':').map((num) => +num);
   const offsetGap = (startTimeEvent[0] * 60 + startTimeEvent[1] - 360) * 100 / 780;
 
   return `
@@ -25,16 +25,19 @@ function timeline(legendData, event) {
             <div
               class="legend_itemRound"
               style="
-              background-color: ${legendData.find(room => room.id === (event.checkInRoom.id || 'home')).color};"
+              background-color: ${legendData.find((room) => room.id === (event.checkInRoom.id)).color};"
             ></div>
-          </div>                        
-          <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 5px);"></div>                        
+          </div>
+          <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 5px);">
+            <div class="timeline_row__info">${moment.parseZone(checkInTime).format('HH:mma')}</div>
+            <div class="timeline_row__info">${moment.parseZone(checkOutTime).format('HH:mma')}</div>
+          </div>
           <div class="legend_item" style="margin-left: -2px">
             <div
               class="legend_itemRound"
-              style="background-color: ${event.checkOutRoom ? legendData.find(room => room.id === (event.checkOutRoom.id)).color : ''};"
+              style="background-color: ${event.checkOutRoom ? legendData.find((room) => room.id === (event.checkOutRoom.id)).color : ''};"
             ></div>
-            <span class="timeline_roomName">${event.checkOutRoom ? legendData.find(room => room.id === (event.checkOutRoom.id)).shortName : ''}</span>                
+            <span class="timeline_roomName">${event.checkOutRoom ? legendData.find((room) => room.id === (event.checkOutRoom.id)).shortName : ''}</span>
           </div>
         </div>
       </div>
@@ -45,7 +48,7 @@ timeline.styles = `
   <style>
     .timeline {
       position: absolute;
-      top: 2px;
+      top: 3px;
       width: 100%;
     }
     .timeline_wrap {
@@ -54,10 +57,17 @@ timeline.styles = `
       -webkit-align-self: center;
     }
     .timeline_row {
-      height: 15px;
-      background-color: green;
-      -webkit-filter: opacity(0.7);
+      height: 13px;
+      background: rgba(106, 191, 77, 0.8);
       border-radius: 3px;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: space-between;
+    }
+    .timeline_row__info {
+      font-size: 6px;
+      font-weight: bold;
+      margin: 0 3px;
     }
     .timeline_roomName {
       margin-left: 3px;
