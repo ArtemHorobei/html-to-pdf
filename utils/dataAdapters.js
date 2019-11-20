@@ -54,14 +54,14 @@ class DataAdapter {
         const homeLegend = {
             id: 'home',
             name: 'Home',
-            color: getColor(),
+            color: '#b60000',
             shortName: 'H',
         };
 
         return [...legends.map(room => ({
             id: room.id,
             name: room.name || '-',
-            color: getColor(),
+            color: '#b60000',
             shortName: getShortName(room.name),
         })), homeLegend];
     }

@@ -22,7 +22,12 @@ function timeline(legendData, event) {
       <div class="timeline_row__info">${moment.parseZone(checkInTime).format('hh:mma')}</div>
       <div class="timeline_row__info">${moment.parseZone(checkOutTime).format('hh:mma')}</div>
     `
-  ) : '';
+  ) : (
+    `
+      <div class="timeline_row__infoAlternativeLeft">${moment.parseZone(checkInTime).format('hh:mma')}</div>
+      <div class="timeline_row__infoAlternativeRight">${moment.parseZone(checkOutTime).format('hh:mma')}</div>
+    `
+  );
   return `
       <div class="timeline" style="margin-left: calc(${offsetGap}% - 2px);">
         ${timeline.styles}
@@ -30,8 +35,7 @@ function timeline(legendData, event) {
           <div class="legend_item" style="margin-right: -2px">
             <div
               class="legend_itemRound"
-              style="
-              background-color: ${legendData.find((room) => room.id === (event.checkInRoom.id)).color};"
+              style="background-color: ${legendData.find((room) => room.id === (event.checkInRoom.id)).color};"
             ></div>
           </div>
           <div class="timeline_row" style="width: calc(${widthTimelineInPercent}% - 5px);">
@@ -73,6 +77,16 @@ timeline.styles = `
       font-size: 6px;
       font-weight: bold;
       margin: 0 3px;
+    }
+    .timeline_row__infoAlternativeLeft {
+      font-size: 6px;
+      font-weight: bold;
+      margin: 0 0 12px -15px;
+    }
+    .timeline_row__infoAlternativeRight {
+      font-size: 6px;
+      font-weight: bold;
+      margin: 12px -15px 0 0;
     }
     .timeline_roomName {
       margin-left: 3px;

@@ -13,8 +13,8 @@ const children = [
         {
           checkInTime: 'Mon Sep 16 2019 09:30:00 GMT+0300 (Eastern European Summer Time)',
           checkInRoom: { id: 1, name: 'Adabelle' },
-          checkOutTime: 'Mon Sep 16 2019 17:15:00 GMT+0300 (Eastern European Summer Time)',
-          checkOutRoom: null
+          checkOutTime: 'Mon Sep 16 2019 09:45:00 GMT+0300 (Eastern European Summer Time)',
+          checkOutRoom: { id: 3, name: 'Zoo' }
         },
       ],
     },
